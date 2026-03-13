@@ -20,17 +20,15 @@
 - 로그인/회원가입과 아이디 중복 확인까지 연결해 기본 회원 흐름 구현
 - 위치 기반 날씨 정보와 내 주변 메가박스 탐색 위젯으로 실사용 감각 보강
 
-## 구현 페이지
+| 메인 페이지 |
+| --- |
+| <p align="center"><img src="https://github.com/user-attachments/assets/ddd746f6-30f4-4e85-aab0-c61a6c32d658" alt="메인 페이지 스크린샷" width="100%" /></p> |
+| <p align="center"><a href="https://megaboxapp.dothome.co.kr/" target="_blank">https://megaboxapp.dothome.co.kr/</a></p> |
 
-| 메인 페이지                                                                                    | 영화 상세 페이지                                                                                               |
-| ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| <p align="center"><img src="이미지_URL_추가" alt="메인 페이지 스크린샷" width="100%" /></p>    | <p align="center"><img src="이미지_URL_추가" alt="영화 상세 페이지 스크린샷" width="100%" /></p>               |
-| <p align="center"><a href="https://megaboxapp.dothome.co.kr/" target="_blank">바로가기</a></p> | <p align="center"><a href="https://megaboxapp.dothome.co.kr/movie-detail.php" target="_blank">바로가기</a></p> |
-
-| 로그인 페이지                                                                                           | 회원가입 페이지                                                                                            |
-| ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| <p align="center"><img src="이미지_URL_추가" alt="로그인 페이지 스크린샷" width="100%" /></p>           | <p align="center"><img src="이미지_URL_추가" alt="회원가입 페이지 스크린샷" width="100%" /></p>            |
-| <p align="center"><a href="https://megaboxapp.dothome.co.kr/login.php" target="_blank">바로가기</a></p> | <p align="center"><a href="https://megaboxapp.dothome.co.kr/register.php" target="_blank">바로가기</a></p> |
+| 영화 상세 페이지 |
+| --- |
+| <p align="center"><img src="https://github.com/user-attachments/assets/669bc0ba-f4c1-4fb6-97f9-33ecacbed37e" alt="영화 상세 페이지 스크린샷" width="100%" /></p> |
+| <p align="center"><a href="https://megaboxapp.dothome.co.kr/movie-detail.php" target="_blank">https://megaboxapp.dothome.co.kr/movie-detail.php</a></p> |
 
 ## 주요 기능
 
