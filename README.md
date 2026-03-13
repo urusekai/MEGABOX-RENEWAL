@@ -1,34 +1,31 @@
 # MEGABOX Renewal
 
-![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-8.x-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![jQuery](https://img.shields.io/badge/jQuery-3.7-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
-![Swiper](https://img.shields.io/badge/Swiper-12-6332F6?style=for-the-badge&logo=swiper&logoColor=white)
-![Kakao%20Maps](https://img.shields.io/badge/Kakao_Maps-API-FFCD00?style=for-the-badge&logo=kakaotalk&logoColor=000000)
-![OpenWeather](https://img.shields.io/badge/OpenWeather-API-E96E50?style=for-the-badge&logo=openweathermap&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/MySQL-8.x-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/jQuery-3.7-0769AD?style=for-the-badge&logo=jquery&logoColor=white" alt="jQuery" />
+  <img src="https://img.shields.io/badge/Swiper-12-6332F6?style=for-the-badge&logo=swiper&logoColor=white" alt="Swiper" />
+  <br>
+  <img src="https://img.shields.io/badge/Kakao_Maps-API-FFCD00?style=for-the-badge&logo=kakaotalk&logoColor=000000" alt="Kakao Maps" />
+  <img src="https://img.shields.io/badge/OpenWeather-API-E96E50?style=for-the-badge&logo=openweathermap&logoColor=white" alt="OpenWeather" />
+</p>
 
-메가박스 웹사이트를 기반으로 메인 경험과 상세 탐색 흐름을 다시 구성한 개인 리뉴얼 프로젝트입니다.  
-브랜드 무드를 유지하면서도 영화 탐색, 프로모션 노출, 상세 페이지 몰입감, 로그인/회원가입 흐름을 직접 구현하는 데 초점을 맞췄습니다.
+<br>
 
-## 프로젝트 소개
+<p align="center">메가박스 웹사이트를 기반으로 메인 페이지와 상세 페이지를 다시 구성한 리뉴얼 프로젝트입니다.<br>
+메가박스의 브랜드 무드를 유지하면서 사용자 흐름과 디자인을 리뉴얼한 프로젝트입니다.
+</p>
 
-이 프로젝트는 단순 클론보다 "사용자가 실제로 둘러보는 흐름"에 집중했습니다.
+<br>
 
-- 메인 페이지에서 영화, 이벤트, 큐레이션, 특별관 정보를 한 번에 탐색할 수 있도록 구성
-- 영화 상세 페이지에서 예고편, 스틸컷, 관람평을 묶어 콘텐츠 소비 경험 강화
-- 로그인/회원가입과 아이디 중복 확인까지 연결해 기본 회원 흐름 구현
-- 위치 기반 날씨 정보와 내 주변 메가박스 탐색 위젯으로 실사용 감각 보강
+<p align="center">
+  <a href="https://megaboxapp.dothome.co.kr/" target="_blank">
+    <img src="https://img.shields.io/badge/megaboxapp.dothome.co.kr-351F67?style=for-the-badge&logo=googlechrome&logoColor=white" alt="megaboxapp.dothome.co.kr" />
+  </a>
+</p>
 
-| 메인 페이지 |
-| --- |
-| <p align="center"><img src="https://github.com/user-attachments/assets/ddd746f6-30f4-4e85-aab0-c61a6c32d658" alt="메인 페이지 스크린샷" width="100%" /></p> |
-| <p align="center"><a href="https://megaboxapp.dothome.co.kr/" target="_blank">https://megaboxapp.dothome.co.kr/</a></p> |
-
-| 영화 상세 페이지 |
-| --- |
-| <p align="center"><img src="https://github.com/user-attachments/assets/669bc0ba-f4c1-4fb6-97f9-33ecacbed37e" alt="영화 상세 페이지 스크린샷" width="100%" /></p> |
-| <p align="center"><a href="https://megaboxapp.dothome.co.kr/movie-detail.php" target="_blank">https://megaboxapp.dothome.co.kr/movie-detail.php</a></p> |
+<br>
 
 ## 주요 기능
 
@@ -44,15 +41,31 @@
 - Masonry 기반 스틸컷 갤러리와 이미지 확대 보기
 - 탭 메뉴를 활용한 상세 정보 전환
 
-### 사용자 흐름
+### 로그인 / 회원가입
 
-- 회원가입 유효성 검사
 - AJAX 아이디 중복 확인
 - PHP + MySQL 기반 로그인 / 세션 처리
 - 비밀번호 해시 저장
 
-### 위젯 기능
+### 카카오 API 기반 위젯
 
 - OpenWeather API를 활용한 현재 날씨 / 미세먼지 표시
 - Kakao Maps API 기반 내 주변 메가박스 탐색
-- 검색 패널 / 사이트맵 토글 인터랙션
+  
+<br>
+
+## 페이지 스크린샷
+
+| 메인 페이지 |
+| --- |
+| <p align="center"><img src="https://github.com/user-attachments/assets/ddd746f6-30f4-4e85-aab0-c61a6c32d658" alt="메인 페이지 스크린샷" width="100%" /></p> |
+| <p align="center"><a href="https://megaboxapp.dothome.co.kr/" target="_blank">https://megaboxapp.dothome.co.kr/</a></p> |
+
+| 영화 상세 페이지 |
+| --- |
+| <p align="center"><img src="https://github.com/user-attachments/assets/669bc0ba-f4c1-4fb6-97f9-33ecacbed37e" alt="영화 상세 페이지 스크린샷" width="100%" /></p> |
+| <p align="center"><a href="https://megaboxapp.dothome.co.kr/movie-detail.php" target="_blank">https://megaboxapp.dothome.co.kr/movie-detail.php</a></p> |
+
+<br>
+
+
