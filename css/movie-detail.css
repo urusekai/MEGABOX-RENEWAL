@@ -1,0 +1,563 @@
+/* ==============================================
+movie-detail 페이지 공통 스타일
+================================================= */
+.page-bg {
+  display: block;
+  position: absolute;
+  top: var(--layout-header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--layout-header-height) + 500px);
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.page-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/bg-zootopia2.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: blur(5px);
+  z-index: 0;
+}
+
+.page-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    var(--color-bg-main) 100%
+  );
+  z-index: 0;
+}
+
+body {
+  position: relative;
+}
+
+.tab-section {
+  display: none;
+}
+
+.tab-section.active {
+  display: block;
+}
+
+/* ==============================================
+Movie Overview 섹션
+================================================= */
+#movie-overview {
+  width: 1000px;
+  min-height: clamp(550px, calc(100vh - var(--layout-header-height)), 800px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#movie-overview .inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#movie-overview .movie-info {
+  display: flex;
+  flex-direction: column;
+}
+#movie-overview .en-title {
+  font-weight: normal;
+  font-size: 25px;
+}
+
+#movie-overview .ko-title {
+  margin-top: 5px;
+  font-size: 50px;
+}
+
+#movie-overview .meta {
+  font-size: 16px;
+}
+
+#movie-overview .movie-meta {
+  margin-top: 15px;
+}
+
+#movie-overview .movie-meta .seperator {
+  margin: 0 0.5em;
+}
+
+#movie-overview .movie-meta .rating.all {
+  color: #10e400;
+}
+
+#movie-overview .info-action {
+  display: flex;
+}
+
+#movie-overview .info-action button {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  height: 40px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+#movie-overview .info-action button svg {
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
+}
+
+#movie-overview .info-action button:hover {
+  color: black;
+  background-color: white;
+}
+
+#movie-overview .info-action .add-favorite {
+  justify-content: space-between;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+#movie-overview .info-action .add-favorite span {
+  font-size: 20px;
+}
+
+#movie-overview .movie-stats {
+  margin-top: auto;
+}
+
+#movie-overview .movie-stats .title:not(:first-child) {
+  margin-top: 15px;
+}
+
+#movie-overview .movie-stats .value {
+  margin-top: 5px;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+#movie-overview .movie-stats .unit {
+  font-size: 16px;
+  margin-left: 0.4em;
+}
+
+#movie-overview .movie-card img {
+  width: 300px;
+  height: 420px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#movie-overview .movie-card a {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  border-radius: 10px;
+
+  font-size: 20px;
+  padding: 15px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  font-weight: 600;
+  background-color: transparent;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+#movie-overview .movie-card a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ==============================================
+Movie Summary 섹션
+================================================= */
+#movie-summary {
+  width: 100%;
+}
+
+#movie-summary .inner {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.3;
+}
+
+#movie-summary strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 2em;
+}
+
+#movie-summary strong:last-of-type {
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
+#movie-summary p {
+  display: block;
+  font-size: 20px;
+  margin: 1em auto;
+}
+
+/* ==============================================
+Tab Menu 섹션
+================================================= */
+main .tab-menu {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-bottom: 1px solid white;
+  background-color: var(--color-bg-main);
+}
+
+main .tab-menu::before {
+  content: "";
+  display: block;
+  height: 0px;
+}
+
+main .tab-menu ul {
+  width: calc(1000px * 0.6);
+  margin: 0 auto;
+  display: flex;
+  border-collapse: collapse;
+}
+
+main .tab-menu ul li {
+  flex: 1;
+}
+
+main .tab-menu ul li button {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  text-align: center;
+  background-color: var(--color-bg-surface);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+main .tab-menu ul li button.active {
+  color: black;
+  background-color: white;
+  font-weight: 600;
+}
+
+/* ============================================
+Movie Detail 섹션
+=============================================== */
+#movie-detail .inner {
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 150px;
+}
+
+#movie-detail h3 {
+  margin-top: 100px;
+  font-size: 40px;
+  padding-bottom: 50px;
+}
+
+#movie-detail .num-items {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+#movie-detail .overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#movie-detail .overlay.is-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#movie-detail .overlay-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  font-size: 50px;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Info (영화정보) =============================== */
+#movie-detail .info .title {
+  margin-top: 15px;
+  font-weight: 500;
+  padding-left: 2px;
+}
+
+#movie-detail .info .title:first-of-type {
+  margin-top: 0;
+}
+
+#movie-detail .info .value {
+  margin-top: 5px;
+  padding-left: 2px;
+}
+
+/* Trailer (예고편) ================================ */
+#movie-detail .trailer .swiper {
+  padding-bottom: 50px;
+}
+
+#movie-detail .trailer .swiper-slide {
+  position: relative;
+  cursor: pointer;
+}
+
+#movie-detail .trailer .swiper-slide .thumb {
+  position: relative;
+}
+
+#movie-detail .trailer .swiper-slide img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  filter: brightness(1);
+  transition: filter 0.2s ease;
+}
+
+#movie-detail .trailer .swiper-slide:hover img {
+  filter: brightness(0.5);
+}
+
+#movie-detail .trailer .swiper-slide .play-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+#movie-detail .trailer .swiper-slide:hover .play-icon {
+  opacity: 1;
+}
+
+#movie-detail .trailer .swiper-scrollbar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#movie-detail .trailer .swiper-scrollbar-drag {
+  background-color: white;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+#movie-detail .trailer-overlay-video {
+  width: clamp(320px, 90vw, 1000px);
+  aspect-ratio: 16 / 9;
+  max-height: 90vh;
+  border: 3px solid white;
+}
+
+/* Still (스틸컷) =============================== */
+#movie-detail .still-list .still-item {
+  width: calc((100% - (20px * 3)) / 4);
+  margin-bottom: 20px;
+}
+
+#movie-detail .still-list img {
+  /* 이미지 아래에 이상한 공백 제거 */
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#movie-detail .still-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  width: 100%;
+  color: white;
+  background: var(--color-bg-surface);
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: border 0.2s ease;
+}
+
+#movie-detail .still-more-btn:hover {
+  border: 1px solid white;
+}
+
+#movie-detail .still-more-btn.is-hidden {
+  display: none;
+}
+
+#movie-detail .still-more-btn svg {
+  height: 16px;
+  width: 16px;
+}
+
+#movie-detail .still-overlay-image {
+  max-width: 80%;
+  max-height: 80%;
+  border: 3px solid white;
+}
+
+/* ============================================
+Movie Review 섹션
+=============================================== */
+#movie-review .inner {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+#movie-review .review-title {
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+#movie-review .review-title .review-count {
+  color: #a359ff;
+  font-weight: 500;
+}
+
+#movie-review #review-form {
+  text-align: right;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#movie-review #review-form .review-header {
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#movie-review #review-form .review-header .rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+#movie-review #review-form .review-header .rating input {
+  display: none;
+}
+
+#movie-review #review-form .review-header .rating label {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+#movie-review #review-form .review-header #review-text-count {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* 체크된 별 + 그 왼쪽 별들 */
+#movie-review #review-form .review-header .rating input:checked ~ label {
+  color: white;
+}
+
+#movie-review #review-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  resize: none;
+  font-family: "NanumSquareNeo", "맑은고딕";
+  line-height: 1.5;
+  background-color: var(--color-bg-surface);
+  color: white;
+}
+
+#movie-review #review-form textarea:focus {
+  border: 1px solid white;
+}
+
+#movie-review #review-form button[type="submit"] {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#movie-review .review-list {
+  margin-top: 40px;
+}
+
+#movie-review .review-list li {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#movie-review .review-list li .review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+#movie-review .review-list li .review-header .user {
+  font-weight: 500;
+}
+
+#movie-review .review-list li .review-header .rating {
+  font-size: 14px;
+  color: #a359ff; /* 작성폼 선택된 별이랑 동일 */
+  letter-spacing: 1px;
+}
+
+#movie-review .review-list li .review-header .date {
+  margin-left: auto;
+  opacity: 0.5;
+  font-size: 13px;
+}
+
+#movie-review .review-list li p {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.9;
+}

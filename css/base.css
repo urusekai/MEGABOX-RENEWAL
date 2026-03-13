@@ -1,0 +1,101 @@
+/* ======================================
+  변수
+====================================== */
+:root {
+  /* Color */
+  --color-primary: #4500c3;
+  --color-text-primary: #ffffff;
+  --color-bg-header: #000000;
+  --color-bg-main: #000000;
+  --color-bg-surface: #161616;
+
+  /* Layout */
+  --layout-max-width: 1000px;
+  --layout-header-height: 210px;
+
+  /* Spacing */
+  --space-section: 150px;
+}
+
+/* ======================================
+  리셋
+====================================== */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+/* ======================================
+  공통 스타일
+====================================== */
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-primary);
+  font-family: "NanumSquareNeo", "맑은고딕";
+  font-weight: 300;
+  letter-spacing: -0.05em;
+}
+
+input {
+  font-family: "NanumSquareNeo", "맑은고딕";
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h2 a img {
+  height: 20px;
+  margin-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+.icon {
+  fill: currentColor;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+button {
+  font-family: "NanumSquareNeo", "맑은고딕";
+}
+
+svg {
+  fill: currentColor;
+}

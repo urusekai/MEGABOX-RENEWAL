@@ -1,0 +1,152 @@
+﻿/* ======================================
+  Floating Side Widgets
+====================================== */
+#floating-side-widgets {
+  --nearby-panel-width: 210px;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: var(--nearby-panel-width);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 30;
+}
+
+#floating-side-widgets #weather-info {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background-color: var(--color-bg-surface);
+  border: none;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  line-height: 1.35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+#floating-side-widgets #weather-info .weather-location {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#floating-side-widgets #weather-info .weather-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#floating-side-widgets #weather-info .weather-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+#floating-side-widgets #weather-info .weather-sep {
+  opacity: 0.55;
+}
+
+#nearby-cinema-panel {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--color-bg-surface);
+  border: none;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+#nearby-cinema-panel h2 {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+#nearby-cinema-panel .nearby-cinema-status {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+#nearby-cinema-map {
+  width: 100%;
+  height: 115px;
+  border-radius: 8px;
+  margin-top: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#nearby-cinema-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#nearby-cinema-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  padding-bottom: 6px;
+}
+
+#nearby-cinema-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+#nearby-cinema-list a {
+  display: block;
+  min-width: 0;
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity 0.2s;
+}
+
+#nearby-cinema-list a:hover {
+  opacity: 0.78;
+}
+
+#nearby-cinema-list .distance {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 10px;
+  letter-spacing: normal;
+}
+
+#nearby-top-button {
+  height: 34px;
+  border-radius: 8px;
+  background-color: var(--color-bg-surface);
+  border: none;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+#nearby-top-button:hover {
+  opacity: 0.82;
+}
+
+@media (max-width: 1650px) {
+  #floating-side-widgets {
+    display: none;
+  }
+}
+
+

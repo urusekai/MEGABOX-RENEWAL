@@ -1,0 +1,428 @@
+/* ======================================
+    Header Section
+  ====================================== */
+header {
+  padding-top: 20px;
+  position: relative;
+  background-color: var(--color-bg-header);
+  height: var(--layout-header-height);
+  box-sizing: border-box;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  z-index: 3;
+}
+
+.header-inner {
+  width: var(--layout-max-width);
+  margin: 0 auto;
+}
+
+/* ---------- GNB ---------- */
+.gnb-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.gnb-list a {
+  display: inline-block;
+}
+
+.gnb-list a:hover {
+  text-decoration: underline;
+}
+
+.gnb-list .spacer {
+  flex: 1;
+  pointer-events: none;
+}
+
+/* ---------- Logo ---------- */
+#logo {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#logo > a {
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+/* ---------- LNB ---------- */
+.lnb-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* ---------- Main Menu ---------- */
+.lnb_main {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  font-size: 18px;
+}
+
+.lnb_main > li {
+  position: relative;
+}
+
+/* 메인메뉴에 호버하면 서브메뉴에 배경 적용 */
+.lnb_main > li.has-sub:hover::after {
+  content: "";
+  position: fixed;
+  left: 0px;
+  top: var(--layout-header-height);
+  background-color: var(--color-bg-surface);
+  width: 100vw;
+  height: 34px;
+  z-index: 4;
+}
+
+.lnb_main > li > a {
+  display: inline-block;
+  padding-top: 2px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.lnb_main > li:hover > a {
+  padding-bottom: 15px;
+  border-bottom: 5px solid #fff;
+  font-weight: 500;
+}
+
+/* ---------- Sub Menu ---------- */
+.lnb_sub {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  z-index: 5;
+}
+
+.lnb_main > li:hover > .lnb_sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lnb_sub a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  /* 요소 안의 콘텐츠가 차지하는 최대 너비만큼 자동으로 폭을 잡아줌 */
+  padding: 12px 10px 10px 10px;
+}
+
+.lnb_sub a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Left Menu ---------- */
+.lnb-area .left-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.lnb-area .left-menu button {
+  cursor: pointer;
+}
+
+.lnb-area .left-menu button[data-target="sitemap"] {
+  background: url(../assets/icons/menu.png) no-repeat center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.lnb-area .left-menu button[data-target="search"] {
+  background: url(../assets/icons/search.png) no-repeat center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.lnb-area .left-menu button.is-active {
+  background: url(../assets/icons//close.png) no-repeat center;
+  background-size: contain;
+}
+
+.lnb-area .left-menu button span {
+  display: none;
+}
+
+/* ---------- Right Menu ---------- */
+.lnb-area .right-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ---------- Sitemap ---------- */
+#sitemap {
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--color-bg-surface);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.2s ease;
+  z-index: 3;
+}
+
+#sitemap.is-active {
+  max-height: 600px;
+}
+
+#sitemap .sitemap-inner {
+  margin: 0 auto;
+  width: var(--layout-max-width);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* 컨테이너를 6개의 열로 나누고, 각 열 폭을 동일하게 1fr로 설정 */
+  gap: 100px 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#sitemap .list {
+  text-align: center;
+  width: 150px;
+}
+
+#sitemap .list p {
+  font-size: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 500;
+}
+
+#sitemap .list li {
+  padding: 5px 0;
+}
+
+#sitemap .list a {
+  display: inline-block;
+  font-size: 14px;
+}
+
+#sitemap .list a:hover {
+  text-decoration: underline;
+}
+
+#sitemap ul {
+  margin-top: 5px;
+}
+
+#sitemap .list:nth-child(6) {
+  grid-row: span 2;
+}
+
+/* ---------- Search ---------- */
+#search {
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--color-bg-surface);
+  position: absolute;
+  transition: all 0.2s ease;
+  padding: 0 35px;
+  z-index: 3;
+}
+
+#search.is-active {
+  max-height: 400px;
+  padding: 35px 35px;
+}
+
+#search .tab-menu {
+  margin-bottom: 20px;
+}
+
+#search .tab-menu button {
+  background: none;
+  color: var(--color-text-primary);
+  padding: 0px 0px 5px 0px;
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#search .tab-menu button.active {
+  border-bottom: 1px solid #fff;
+  opacity: 1;
+}
+
+#search .search-tabs {
+  margin-bottom: 20px;
+}
+
+#search .search-tab {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+#search .search-tab.active {
+  display: flex;
+}
+
+#search .search-tab img {
+  width: 150px;
+  height: 215px;
+}
+
+#search .search-tab ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#search .search-tab li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+#search .search-tab .rank {
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+}
+
+#search .search-tab a {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  font-size: 16px;
+  flex: 1;
+}
+
+#search .search-tab a:hover {
+  text-decoration: underline;
+}
+#search .search-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+#search .search-form input {
+  flex: 1;
+  background: none;
+  font-size: 16px;
+  color: white;
+}
+
+#search .search-form button {
+  background: none;
+  cursor: pointer;
+}
+
+/* ======================================
+  Footer Section
+====================================== */
+footer {
+  border-top: 1px solid white;
+  background-color: var(--color-bg-header);
+  padding-bottom: 20px;
+}
+
+footer .footer-inner {
+  width: var(--layout-max-width);
+  margin: 0 auto;
+}
+
+/* ---------- Ads ---------- */
+footer .footer-ads img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Nav ---------- */
+footer .footer-nav {
+  padding-top: 20px;
+}
+
+footer .footer-nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+/* ---------- Info ---------- */
+footer .footer-info {
+  padding: 40px 0;
+}
+
+footer .footer-info p {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+
+footer .footer-info p:last-child {
+  color: var(--color-text-primary);
+}
+
+/* ---------- Util ---------- */
+footer .footer-util {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+footer .view-theater {
+  justify-content: start;
+  width: 200px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-surface);
+}
+
+footer .logo {
+  justify-content: center;
+}
+footer .sns {
+  justify-content: end;
+  display: flex;
+  gap: 10px;
+}
+
+footer .sns img {
+  height: 30px;
+  width: auto;
+}

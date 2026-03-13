@@ -1,0 +1,119 @@
+#register-wrap {
+  max-width: 1000px;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#register-wrap .register-card {
+  width: 50%;
+  border-radius: 20px;
+}
+
+#register-wrap .register-card h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+
+#register-wrap #register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#register-wrap #register-form .input-label {
+  padding-left: 5px;
+}
+
+#register-wrap #register-form input {
+  background-color: var(--color-bg-surface);
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  /* border-radius: 10px; */
+  border: 1px solid transparent;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#register-wrap #register-form input:focus {
+  border: 1px solid white;
+}
+
+#register-wrap #register-form .input-with-btn {
+  display: flex;
+  gap: 10px;
+}
+
+#register-wrap #register-form .input-with-btn input {
+  flex: 1;
+}
+
+#register-wrap #register-form #check-id {
+  font-size: 16px;
+  padding: 20px;
+  /* border-radius: 10px; */
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: white;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+#register-wrap #register-form #check-id:hover {
+  filter: brightness(1.4);
+}
+
+#register-wrap #register-form .marketing,
+#register-wrap #register-form .terms {
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+#register-wrap #register-form .terms {
+  margin-bottom: 10px;
+}
+
+#register-wrap #register-form .marketing input,
+#register-wrap #register-form .terms input {
+  margin: 0;
+  margin-right: 5px;
+  padding: 0;
+}
+
+#register-wrap #register-form .terms a {
+  margin-left: 0.5em;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#register-wrap #register-form .required,
+#register-wrap #register-form .optional {
+  margin-right: 0.5em;
+}
+
+#register-wrap #register-form .required {
+  color: rgb(255, 0, 0);
+}
+
+#register-wrap #register-form #register-submit {
+  margin: 30px 0;
+  padding: 20px;
+  /* border-radius: 10px; */
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+#register-wrap #register-form #register-submit:hover {
+  filter: brightness(1.4);
+}
