@@ -21,6 +21,15 @@
   <!-- 페이지 JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="./js/main.js" type="module"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WQEW7LEWV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1WQEW7LEWV');
+  </script>
 </head>
 
 <body>
@@ -95,5 +104,3 @@
 </body>
 
 </html>
-
-
