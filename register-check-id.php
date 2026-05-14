@@ -29,7 +29,7 @@
   if (!$id) {
     echo "<p>아이디를 입력해주세요</p>";
   } else {
-    $con = mysqli_connect('localhost', DBuser, DBpass, DBname);
+    $con = mysqli_connect(DBhost, DBuser, DBpass, DBname);
 
     $sql = "SELECT id FROM members WHERE id='$id'";
     $result = mysqli_query($con, $sql);

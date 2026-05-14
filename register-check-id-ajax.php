@@ -13,7 +13,7 @@ if ($id === "") {
   exit;
 }
 
-$con = mysqli_connect("localhost", DBuser, DBpass, DBname);
+$con = mysqli_connect(DBhost, DBuser, DBpass, DBname);
 
 if (!$con) {
   echo json_encode([

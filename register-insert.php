@@ -1,16 +1,19 @@
 <?php
 include "define.php";
 
-$id = $_POST['user_id'];
-$pass = password_hash($_POST['user_pw'], PASSWORD_DEFAULT); // 해시함수
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
+$id = trim($_POST['user_id'] ?? '');
+$pass = password_hash($_POST['user_pw'] ?? '', PASSWORD_DEFAULT); // 해시함수
+$name = trim($_POST['name'] ?? '');
+$phone = trim($_POST['phone'] ?? '');
+$email = trim($_POST['email'] ?? '');
 
-$con = mysqli_connect('localhost', DBuser, DBpass, DBname);
-$sql = "SELECT id FROM members WHERE id='$id'";
-$result = mysqli_query($con, $sql);
+$con = mysqli_connect(DBhost, DBuser, DBpass, DBname);
+$stmt = mysqli_prepare($con, "SELECT id FROM members WHERE id = ? LIMIT 1");
+mysqli_stmt_bind_param($stmt, "s", $id);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 $row = mysqli_num_rows($result);
+mysqli_stmt_close($stmt);
 
 if ($row) {
   echo ("
@@ -20,8 +23,11 @@ if ($row) {
     </script>
   ");
 } else {
-  $sql = "INSERT INTO members (id, pass, name, phone, email) VALUES ('$id', '$pass', '$name', '$phone', '$email')";
-  mysqli_query($con, $sql);
+  $stmt = mysqli_prepare($con, "INSERT INTO members (id, pass, name, phone, email) VALUES (?, ?, ?, ?, ?)");
+  mysqli_stmt_bind_param($stmt, "sssss", $id, $pass, $name, $phone, $email);
+  mysqli_stmt_execute($stmt);
+  mysqli_stmt_close($stmt);
+
   echo ("
     <script>
       alert('회원가입이 완료되었습니다!');

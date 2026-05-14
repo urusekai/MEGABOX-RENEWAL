@@ -1,7 +1,7 @@
 <?php
 include "define.php";
 
-$con = mysqli_connect('localhost', DBuser, DBpass, DBname);
+$con = mysqli_connect(DBhost, DBuser, DBpass, DBname);
 $id = $_POST['user_id'];
 $pass = $_POST['user_pw'];
 $sql = "SELECT * FROM members WHERE id='$id'";
